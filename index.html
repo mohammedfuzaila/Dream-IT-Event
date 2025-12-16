@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream IT 2k26 | Inter-College Technical Fest</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. CSS Variables for Color Palette and Design Tokens --- */
+        :root {
+            --color-primary: #0F172A; /* Dark Navy */
+            --color-secondary: #2563EB; /* Royal Blue */
+            --color-accent: #22D3EE; /* Cyan */
+            --color-background: #F8FAFC; /* Light Gray */
+            --color-white: #ffffff;
+            --color-text-dark: #334155;
+            --color-text-light: #94A3B8;
+
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+
+            --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-glow: 0 0 15px rgba(34, 211, 238, 0.6); /* Enhanced Cyan Glow */
+            --transition-duration: 0.5s;
+        }
+
+        /* --- 2. Base & Typography --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+            background-color: var(--color-background);
+            overflow-x: hidden; /* Prevent horizontal scroll from transitions */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: var(--color-primary);
+            font-weight: 800;
+        }
+
+        h2.section-heading {
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--color-secondary);
+            text-transform: uppercase;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-secondary);
+            transition: color var(--transition-duration);
+        }
+
+        /* --- 3. Utility Components --- */
+        .cta-button {
+            display: inline-block;
+            padding: 14px 35px;
+            background: linear-gradient(45deg, var(--color-secondary), #3B82F6);
+            color: var(--color-white);
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.6);
+        }
+
+        .section-padding {
+            padding: 8rem 0;
+        }
+
+        .section-light-bg {
+            background-color: var(--color-white);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* --- 4. Header & Navigation --- */
+        .main-header {
+            background-color: var(--color-primary);
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--color-accent);
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .main-nav a {
+            color: var(--color-white);
+            margin-left: 30px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            position: relative;
+            opacity: 0.9;
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background-color: var(--color-accent);
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease-out;
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--color-accent);
+            opacity: 1;
+        }
+        
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+
+        /* --- 5. Hero Section --- */
+        .hero-section {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            background-color: var(--color-primary);
+            background-image: linear-gradient(135deg, var(--color-primary) 0%, #1e293b 100%);
+            color: var(--color-white);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-title-image {
+            max-width: 700px;
+            width: 90%;
+            height: auto;
+            /* Placeholder style refinement */
+            background: rgba(34, 211, 238, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(34, 211, 238, 0.3);
+            border: 1px solid var(--color-accent);
+        }
+
+        .subtitle {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* --- 6. Events Section --- */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .event-card {
+            background-color: var(--color-white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid #E2E8F0;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0; /* For JavaScript entry animation */
+            transform: translateY(20px); /* For JavaScript entry animation */
+        }
+
+        .event-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: var(--shadow-glow); /* Cyan Glow */
+            border-color: var(--color-accent);
+        }
+
+        .event-icon {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 20px;
+            background-color: var(--color-secondary);
+            border-radius: 50%;
+            padding: 15px;
+            fill: var(--color-white); /* Ensure SVG icon is white */
+        }
+
+        .event-name {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: var(--color-primary);
+        }
+
+        .event-tagline {
+            font-size: 1rem;
+            color: var(--color-text-light);
+            font-style: italic;
+        }
+
+        /* --- 7. About & Contact Sections --- */
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            font-size: 1.15rem;
+        }
+
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info-card {
+            background-color: var(--color-white);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-soft);
+            text-align: left;
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+            border-left: 5px solid var(--color-secondary);
+        }
+
+        .contact-info-card h3 {
+            color: var(--color-secondary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .contact-info-card p {
+            margin-bottom: 5px;
+        }
+
+        /* --- 8. Event Rules Section (SPA-Style Transition) --- */
+        #main-content {
+            transition: opacity var(--transition-duration) ease-in-out;
+        }
+        
+        .rules-section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-background);
+            padding-top: 100px; 
+            overflow-y: auto;
+            z-index: 2000;
+            opacity: 0;
+            transform: scale(0.95);
+            pointer-events: none; /* Initially disable interaction */
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .rules-section.active {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto; 
+        }
+
+        .rules-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            max-width: 1000px;
+        }
+
+        .back-button {
+            align-self: flex-start;
+            background: none;
+            border: 2px solid var(--color-secondary);
+            padding: 8px 15px;
+            border-radius: 8px;
+            color: var(--color-secondary);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+        }
+
+        .rules-card {
+            background-color: var(--color-white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-top: 8px solid var(--color-accent);
+        }
+
+        .rules-heading {
+            color: var(--color-primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid var(--color-accent);
+            padding-bottom: 10px;
+        }
+
+        .rules-content h4 {
+            color: var(--color-secondary);
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .rules-content p, .rules-content li {
+            font-size: 1.05rem;
+        }
+
+        .rules-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .rules-content li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .rules-content li::before {
+            content: "•";
+            color: var(--color-accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .rules-content strong {
+            color: var(--color-primary);
+        }
+
+        .register-button {
+            margin-top: 30px;
+            display: inline-block;
+        }
+
+        /* --- 9. Footer --- */
+        .main-footer {
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            text-align: center;
+            padding: 25px 0;
+            font-size: 0.95rem;
+        }
+
+        /* --- 10. Responsive Design --- */
+        @media (max-width: 900px) {
+            .rules-section {
+                padding-top: 80px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .main-nav a {
+                margin: 0 10px;
+            }
+
+            h2.section-heading {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .hero-section {
+                height: auto;
+                padding: 120px 0 80px 0;
+            }
+            
+            .subtitle {
+                font-size: 1.4rem;
+            }
+
+            .section-padding {
+                padding: 5rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+            .main-nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .main-nav a {
+                font-size: 0.9rem;
+                margin: 5px 8px;
+            }
+            .rules-card {
+                padding: 30px 20px;
+            }
+            .rules-heading {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container nav-content">
+            <a href="#hero-section" class="logo">Dream IT</a>
+            <nav class="main-nav">
+                <a href="#hero-section">Home</a>
+                <a href="#events-section">Events</a>
+                <a href="#about-section">About</a>
+                <a href="#contact-section">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <section id="hero-section" class="hero-section">
+            <div class="container hero-content">
+                <img src="assets/images/dream-it-2k26-placeholder.png" alt="Dream IT 2k26" class="hero-title-image">
+                <p class="subtitle">Inter-College Technical Fest</p>
+                <a href="#events-section" class="cta-button">Explore Events</a>
+            </div>
+        </section>
+
+        <section id="events-section" class="section-padding">
+            <div class="container">
+                <h2 class="section-heading">Our 8 Technical Events</h2>
+                <div class="events-grid" id="events-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section id="about-section" class="section-padding section-light-bg">
+            <div class="container">
+                <h2 class="section-heading">About Dream IT 2k26</h2>
+                <div class="about-content">
+                    <p>Dream IT 2k26 is the premier annual inter-college technical festival hosted by the **Department of Information Technology**. We provide a dynamic, competitive, and collaborative platform for students from across India to challenge their technical acumen, showcase cutting-edge projects, and foster innovation.</p>
+                    <p>Our 8 meticulously curated events span the full spectrum of modern computing and design. Join us to network with industry experts, compete for exciting prizes, and turn your technical dreams into tangible reality.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="section-padding">
+            <div class="container">
+                <h2 class="section-heading">Get in Touch</h2>
+                <div class="contact-grid">
+                    <div class="contact-info-card">
+                        <h3>General Enquiries</h3>
+                        <p><strong>Head Coordinator:</strong> Dr. R. Senthil</p>
+                        <p><strong>Email:</strong> dreamit.support@college.edu</p>
+                        <p><strong>Phone:</strong> +91 98765 43210</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <h3>Venue & Logistics</h3>
+                        <p><strong>Location:</strong> IT Department Block, Central Campus</p>
+                        <p><strong>Date:</strong> February 28, 2026</p>
+                        <p><strong>Time:</strong> 9:00 AM onwards</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <section id="rules-section" class="rules-section hidden">
+        <div class="container rules-container">
+            <button class="back-button" id="back-to-events">← Back to Events</button>
+            <div class="rules-card">
+                <h2 id="rules-event-name" class="rules-heading">Event Name</h2>
+                <div class="rules-content">
+                    </div>
+                <a href="#" class="cta-button register-button">Register Now (Dummy)</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 Department of Information Technology. All Rights Reserved. | Dream IT 2k26</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. Event Data Structure ---
+        const eventsData = [
+            { id: 1, name: "Code Clash", tagline: "Battle it out on the command line.", teamSize: "Individual (or Max 2)", timeLimit: "2 Hours", 
+              description: "A fast-paced competitive programming event designed to test your algorithmic thinking and coding speed.",
+              rules: ["Participants must use C/C++/Java/Python.", "Internet access is restricted.", "Plagiarism leads to disqualification."] },
+            
+            { id: 2, name: "Web Wizards", tagline: "Design and develop a website in a day.", teamSize: "Max 3 members", timeLimit: "6 Hours",
+              description: "A front-to-back challenge where teams build a fully functional web application prototype based on a given theme.",
+              rules: ["Must use HTML5, CSS3, and JavaScript (Vanilla or frameworks).", "Judged on design, functionality, and innovation."] },
+            
+            { id: 3, name: "Debug Arena", tagline: "Find the bugs, save the code.", teamSize: "Individual", timeLimit: "1.5 Hours",
+              description: "Test your debugging and error-handling skills by identifying and fixing pre-loaded bugs in various code snippets.",
+              rules: ["No external help or communication.", "Points awarded for speed and accuracy.", "Code environment is provided by organizers."] },
+            
+            { id: 4, name: "UI/UX Sprint", tagline: "Craft the ultimate user experience.", teamSize: "Max 2 members", timeLimit: "4 Hours",
+              description: "A human-centered design challenge where participants create wireframes and high-fidelity mockups for a specified application.",
+              rules: ["Use of any design tool (Figma, XD, etc.) is permitted.", "Deliverables include mockups and a brief presentation.", "Focus on usability and aesthetic quality."] },
+            
+            { id: 5, name: "Hackathon", tagline: "Innovate, build, present.", teamSize: "Max 4 members", timeLimit: "24 Hours",
+              description: "A non-stop challenge where teams develop a technical solution to a pre-released real-world problem statement.",
+              rules: ["All code must be original and written during the event.", "Teams must present a working prototype and pitch.", "Accommodation and meals provided on campus."] },
+            
+            { id: 6, name: "Tech Quiz", tagline: "Test your knowledge on all things tech.", teamSize: "Max 2 members", timeLimit: "45 Minutes",
+              description: "A multi-round quiz covering history of computing, current tech trends, AI, networking, and IT fundamentals.",
+              rules: ["Standard buzzer system rules apply.", "No use of mobile phones or external resources.", "Three main rounds: Prelims, Semis, and Finals."] },
+            
+            { id: 7, name: "Paper Presentation", tagline: "Share your research, inspire the future.", teamSize: "Individual (or Max 2)", timeLimit: "15 Minutes (10+5)",
+              description: "Students present academic research or technical papers on emerging technologies to an expert panel.",
+              rules: ["Abstract submission is mandatory before the event.", "Presentation must be professional (PPT/PDF).", "Judged on content originality and clarity."] },
+            
+            { id: 8, name: "Project Expo", tagline: "Showcase your innovations.", teamSize: "Max 4 members", timeLimit: "Full Day Expo",
+              description: "An exhibition for working technical models, hardware prototypes, or functional software projects developed by students.",
+              rules: ["Project must be demonstrable and functional.", "A detailed project report must accompany the exhibit.", "Judged on feasibility, technical depth, and social impact."] }
+        ];
+
+        // --- 2. DOM Element Selectors ---
+        const eventsGrid = document.getElementById('events-grid');
+        const mainContent = document.getElementById('main-content');
+        const rulesSection = document.getElementById('rules-section');
+        const backButton = document.getElementById('back-to-events');
+        const rulesEventName = document.getElementById('rules-event-name');
+        const rulesContent = document.querySelector('.rules-content');
+        const eventCards = []; // Array to store card elements for animation
+
+
+        // --- 3. Event Card Rendering Function ---
+        function renderEventCards() {
+            eventsData.forEach((event, index) => {
+                const card = document.createElement('div');
+                card.className = 'event-card';
+                card.setAttribute('data-event-id', event.id);
+                card.style.animationDelay = `${index * 0.1}s`; // Staggered entrance
+
+                // Placeholder SVG icon (re-using the same placeholder)
+                const iconSvg = `
+                    <svg class="event-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM12 4.4L18.7 7.7V15.3L12 18.6L5.3 15.3V7.7L12 4.4Z" fill="currentColor"/>
+                    </svg>
+                `;
+
+                card.innerHTML = `
+                    ${iconSvg}
+                    <h3 class="event-name">${event.name}</h3>
+                    <p class="event-tagline">${event.tagline}</p>
+                `;
+
+                // Add click listener
+                card.addEventListener('click', () => showRules(event.id));
+
+                eventsGrid.appendChild(card);
+                eventCards.push(card);
+            });
+        }
+        
+        // --- 4. Event Card Entrance Animation (Visibility Observer) ---
+        function activateCardEntrance() {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const card = entry.target;
+                        card.style.opacity = 1;
+                        card.style.transform = 'translateY(0)';
+                        observer.unobserve(card);
+                    }
+                });
+            }, {
+                rootMargin: '0px',
+                threshold: 0.2 // Trigger when 20% of the item is visible
+            });
+
+            eventCards.forEach(card => observer.observe(card));
+        }
+
+        // --- 5. Rules Section Display & Content Loading Function (SPA) ---
+        function showRules(eventId) {
+            const event = eventsData.find(e => e.id === eventId);
+            if (!event) return;
+
+            // 1. Update Rules Content
+            rulesEventName.textContent = event.name;
+            
+            // Generate dynamic HTML
+            const rulesHTML = `
+                <h4>Event Description</h4>
+                <p>${event.description}</p>
+                
+                <h4>Key Details</h4>
+                <p><strong>Team Size:</strong> ${event.teamSize}</p>
+                <p><strong>Time Limit:</strong> ${event.timeLimit}</p>
+                
+                <h4>Rules & Regulations</h4>
+                <ul>
+                    ${event.rules.map(rule => `<li>${rule}</li>`).join('')}
+                </ul>
+            `;
+            rulesContent.innerHTML = rulesHTML;
+
+            // 2. Transition View
+            // Fade out main content
+            mainContent.style.opacity = '0';
+            
+            setTimeout(() => {
+                // After fade out, hide main content and show rules section
+                mainContent.classList.add('hidden');
+                window.scrollTo(0, 0); // Scroll to top of the new "page"
+                rulesSection.classList.remove('hidden');
+                
+                // Trigger the visual transition for rules section
+                setTimeout(() => rulesSection.classList.add('active'), 10); 
+            }, 500); // Matches CSS transition duration
+        }
+
+        // --- 6. Back Button Functionality ---
+        backButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // 1. Hide Rules Section
+            rulesSection.classList.remove('active');
+            
+            setTimeout(() => {
+                // After slide-out, hide rules section and show main content
+                rulesSection.classList.add('hidden');
+                mainContent.classList.remove('hidden');
+                
+                // Trigger the visual transition for main content
+                setTimeout(() => mainContent.style.opacity = '1', 10);
+                
+                // Scroll back to the events section
+                document.getElementById('events-section').scrollIntoView({ behavior: 'smooth' });
+
+            }, 500); // Matches CSS transition duration
+        });
+
+        // --- 7. Initial Page Load and Setup ---
+        document.addEventListener('DOMContentLoaded', () => {
+            renderEventCards();
+            activateCardEntrance();
+        });
+    </script>
+</body>
+</html>
