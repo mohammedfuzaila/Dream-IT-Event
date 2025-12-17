@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream IT 2K26 | Inter College Technical Fest</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* CSS Reset */
@@ -17,17 +20,23 @@
         }
 
         :root {
-            --primary: #2563EB; /* Updated: Bright Blue */
-            --secondary: #10B981; /* Updated: Emerald Green */
-            --accent: #F59E0B; /* Kept original */
+            --primary: #2563EB;
+            /* Updated: Bright Blue */
+            --secondary: #10B981;
+            /* Updated: Emerald Green */
+            --accent: #F59E0B;
+            /* Kept original */
             --bg-dark: #0F172A;
             --bg-card: #1E293B;
             --text-light: #F8FAFC;
             --text-gray: #CBD5E1;
             --border-color: #334155;
-            --gradient-start: #8B5CF6; /* Updated: Purple */
-            --gradient-end: #3B82F6; /* Updated: Blue */
-            --hover-color: #06B6D4; /* Updated: Cyan */
+            --gradient-start: #8B5CF6;
+            /* Updated: Purple */
+            --gradient-end: #3B82F6;
+            /* Updated: Blue */
+            --hover-color: #06B6D4;
+            /* Updated: Cyan */
         }
 
         html {
@@ -42,7 +51,10 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
             line-height: 1.2;
@@ -158,8 +170,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), 
-                        url('logo (2).png');
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)),
+                url('logo (2).png');
             background-size: cover;
             background-position: center;
             z-index: -1;
@@ -186,9 +198,11 @@
             0% {
                 text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
             }
+
             50% {
                 text-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.4);
             }
+
             100% {
                 text-shadow: 0 0 15px rgba(139, 92, 246, 0.7), 0 0 25px rgba(59, 130, 246, 0.5);
             }
@@ -352,8 +366,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .rules-header {
@@ -466,11 +487,11 @@
             .hero h1 {
                 font-size: 3.5rem;
             }
-            
+
             .hero-subtitle {
                 font-size: 1.5rem;
             }
-            
+
             .section-title {
                 font-size: 2.4rem;
             }
@@ -490,23 +511,23 @@
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
                 border-top: 1px solid var(--border-color);
             }
-            
+
             nav ul.active {
                 display: flex;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             .hero h1 {
                 font-size: 2.8rem;
             }
-            
+
             .hero-subtitle {
                 font-size: 1.3rem;
             }
-            
+
             .rules-container {
                 padding: 30px 20px;
             }
@@ -516,429 +537,526 @@
             .hero h1 {
                 font-size: 2.2rem;
             }
-            
+
             .hero-subtitle {
                 font-size: 1.1rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
-            
+
             .events-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .cta-button {
                 padding: 14px 30px;
                 font-size: 16px;
             }
         }
+
         /* Add to your existing CSS file */
 
-/* Enhanced Hero Section Animations */
-.hero-content {
-    animation: fadeInUp 1s ease-out 0.3s both;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Floating Animation for Hero Elements */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-.hero h1 {
-    animation: float 6s ease-in-out infinite;
-}
-
-.hero-subtitle {
-    animation: float 6s ease-in-out infinite 0.5s;
-}
-
-.cta-button {
-    animation: float 6s ease-in-out infinite 1s;
-}
-
-/* Enhanced Event Cards Animation */
-.event-card {
-    opacity: 0;
-    animation: fadeInScale 0.6s ease-out forwards;
-}
-
-/* Stagger animation for cards */
-.event-card:nth-child(1) { animation-delay: 0.1s; }
-.event-card:nth-child(2) { animation-delay: 0.2s; }
-.event-card:nth-child(3) { animation-delay: 0.3s; }
-.event-card:nth-child(4) { animation-delay: 0.4s; }
-.event-card:nth-child(5) { animation-delay: 0.5s; }
-.event-card:nth-child(6) { animation-delay: 0.6s; }
-.event-card:nth-child(7) { animation-delay: 0.7s; }
-.event-card:nth-child(8) { animation-delay: 0.8s; }
-
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.9) translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-/* Enhanced Hover Effects */
-.event-card:hover .event-icon {
-    animation: iconPulse 0.6s ease-out;
-}
-
-@keyframes iconPulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1.1);
-    }
-}
-
-/* Loading Animation for Rules Section */
-.rules-container {
-    animation: slideInFade 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@keyframes slideInFade {
-    from {
-        opacity: 0;
-        transform: translateY(40px) perspective(500px) rotateX(10deg);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) perspective(500px) rotateX(0);
-    }
-}
-
-/* Scroll-triggered Animations */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.animate-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Navigation Animation */
-nav a {
-    position: relative;
-    overflow: hidden;
-}
-
-nav a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transition: left 0.7s ease;
-}
-
-nav a:hover::before {
-    left: 100%;
-}
-
-/* Footer Animation */
-.footer-content {
-    animation: fadeIn 1.2s ease-out 0.5s both;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Particle Background Effect */
-.particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: var(--gradient-start);
-    border-radius: 50%;
-    animation: particleFloat 15s infinite linear;
-}
-
-.particle:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-.particle:nth-child(2) { top: 20%; left: 80%; animation-delay: 2s; }
-.particle:nth-child(3) { top: 40%; left: 40%; animation-delay: 4s; }
-.particle:nth-child(4) { top: 60%; left: 60%; animation-delay: 6s; }
-.particle:nth-child(5) { top: 80%; left: 20%; animation-delay: 8s; }
-.particle:nth-child(6) { top: 30%; left: 90%; animation-delay: 10s; }
-.particle:nth-child(7) { top: 70%; left: 10%; animation-delay: 12s; }
-.particle:nth-child(8) { top: 90%; left: 70%; animation-delay: 14s; }
-
-@keyframes particleFloat {
-    0%, 100% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-    10%, 90% {
-        opacity: 0.7;
-    }
-    50% {
-        transform: translate(100px, -100px);
-        opacity: 1;
-    }
-}
-
-/* Responsive Animation Adjustments */
-@media (max-width: 768px) {
-    /* Slower animations on mobile for better performance */
-    .hero h1,
-    .hero-subtitle,
-    .cta-button {
-        animation-duration: 8s;
-    }
-    
-    .event-card {
-        animation: fadeInUpMobile 0.5s ease-out forwards;
-    }
-    
-    @keyframes fadeInUpMobile {
-        from {
-            opacity: 0;
-            transform: translateY(15px);
+        /* Enhanced Hero Section Animations */
+        .hero-content {
+            animation: fadeInUp 1s ease-out 0.3s both;
         }
-        to {
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Floating Animation for Hero Elements */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero h1 {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-subtitle {
+            animation: float 6s ease-in-out infinite 0.5s;
+        }
+
+        .cta-button {
+            animation: float 6s ease-in-out infinite 1s;
+        }
+
+        /* Enhanced Event Cards Animation */
+        .event-card {
+            opacity: 0;
+            animation: fadeInScale 0.6s ease-out forwards;
+        }
+
+        /* Stagger animation for cards */
+        .event-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .event-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .event-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .event-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .event-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .event-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .event-card:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .event-card:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        /* Enhanced Hover Effects */
+        .event-card:hover .event-icon {
+            animation: iconPulse 0.6s ease-out;
+        }
+
+        @keyframes iconPulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Loading Animation for Rules Section */
+        .rules-container {
+            animation: slideInFade 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+
+        @keyframes slideInFade {
+            from {
+                opacity: 0;
+                transform: translateY(40px) perspective(500px) rotateX(10deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) perspective(500px) rotateX(0);
+            }
+        }
+
+        /* Scroll-triggered Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-on-scroll.visible {
             opacity: 1;
             transform: translateY(0);
         }
-    }
-    
-    /* Adjust particle count and size for mobile */
-    .particle {
-        width: 3px;
-        height: 3px;
-    }
-    
-    .particle:nth-child(odd) {
-        display: none; /* Hide half particles on mobile */
-    }
-}
 
-@media (max-width: 480px) {
-    /* Further simplify animations for very small screens */
-    .hero h1,
-    .hero-subtitle,
-    .cta-button {
-        animation: none;
-        opacity: 1;
-    }
-    
-    .event-card {
-        animation: fadeIn 0.4s ease-out forwards;
-    }
-    
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
+        /* Navigation Animation */
+        nav a {
+            position: relative;
+            overflow: hidden;
         }
-        to {
-            opacity: 1;
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.7s ease;
         }
-    }
-}
 
-/* Button Click Animation */
-.cta-button:active,
-.back-button:active {
-    animation: buttonClick 0.3s ease;
-}
+        nav a:hover::before {
+            left: 100%;
+        }
 
-@keyframes buttonClick {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.95);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-/* Loading Screen with Logo */
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, var(--bg-dark), #1a1f3d);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    animation: fadeOut 0.5s ease 2s forwards;
-}
+        /* Footer Animation */
+        .footer-content {
+            animation: fadeIn 1.2s ease-out 0.5s both;
+        }
 
-.logo-loader {
-    text-align: center;
-    animation: pulse 2s infinite;
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
 
-.logo-image {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 20px;
-    animation: logoFloat 3s ease-in-out infinite;
-}
+            to {
+                opacity: 1;
+            }
+        }
 
-.logo-text-loader {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end), var(--accent));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-size: 200% auto;
-    animation: gradientShift 3s ease-in-out infinite, textGlow 2s ease-in-out infinite alternate;
-}
+        /* Particle Background Effect */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
 
-@keyframes logoFloat {
-    0%, 100% {
-        transform: translateY(0) scale(1);
-    }
-    50% {
-        transform: translateY(-15px) scale(1.05);
-    }
-}
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--gradient-start);
+            border-radius: 50%;
+            animation: particleFloat 15s infinite linear;
+        }
 
-@keyframes pulse {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.8;
-    }
-}
+        .particle:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+        }
 
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+        .particle:nth-child(2) {
+            top: 20%;
+            left: 80%;
+            animation-delay: 2s;
+        }
 
-@keyframes textGlow {
-    from {
-        text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
-    }
-    to {
-        text-shadow: 0 0 20px rgba(59, 130, 246, 0.6), 0 0 30px rgba(245, 158, 11, 0.4);
-    }
-}
+        .particle:nth-child(3) {
+            top: 40%;
+            left: 40%;
+            animation-delay: 4s;
+        }
 
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
+        .particle:nth-child(4) {
+            top: 60%;
+            left: 60%;
+            animation-delay: 6s;
+        }
 
-/* Logo spinning animation (optional) */
-@keyframes logoSpin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
+        .particle:nth-child(5) {
+            top: 80%;
+            left: 20%;
+            animation-delay: 8s;
+        }
 
-/* You can choose one of these logo styles */
-.logo-spin {
-    animation: logoSpin 3s linear infinite;
-}
+        .particle:nth-child(6) {
+            top: 30%;
+            left: 90%;
+            animation-delay: 10s;
+        }
 
-.logo-bounce {
-    animation: logoFloat 2s ease-in-out infinite;
-}
-/* Smooth Page Transitions */
-* {
-    scroll-behavior: smooth;
-}
+        .particle:nth-child(7) {
+            top: 70%;
+            left: 10%;
+            animation-delay: 12s;
+        }
 
-/* Enhanced Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-}
+        .particle:nth-child(8) {
+            top: 90%;
+            left: 70%;
+            animation-delay: 14s;
+        }
 
-::-webkit-scrollbar-track {
-    background: var(--bg-dark);
-}
+        @keyframes particleFloat {
 
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(var(--primary), var(--secondary));
-    border-radius: 5px;
-}
+            0%,
+            100% {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
 
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(var(--gradient-start), var(--gradient-end));
-}
+            10%,
+            90% {
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: translate(100px, -100px);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Animation Adjustments */
+        @media (max-width: 768px) {
+
+            /* Slower animations on mobile for better performance */
+            .hero h1,
+            .hero-subtitle,
+            .cta-button {
+                animation-duration: 8s;
+            }
+
+            .event-card {
+                animation: fadeInUpMobile 0.5s ease-out forwards;
+            }
+
+            @keyframes fadeInUpMobile {
+                from {
+                    opacity: 0;
+                    transform: translateY(15px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Adjust particle count and size for mobile */
+            .particle {
+                width: 3px;
+                height: 3px;
+            }
+
+            .particle:nth-child(odd) {
+                display: none;
+                /* Hide half particles on mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            /* Further simplify animations for very small screens */
+            .hero h1,
+            .hero-subtitle,
+            .cta-button {
+                animation: none;
+                opacity: 1;
+            }
+
+            .event-card {
+                animation: fadeIn 0.4s ease-out forwards;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+
+        /* Button Click Animation */
+        .cta-button:active,
+        .back-button:active {
+            animation: buttonClick 0.3s ease;
+        }
+
+        @keyframes buttonClick {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.95);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Loading Screen with Logo */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--bg-dark), #1a1f3d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeOut 0.5s ease 2s forwards;
+        }
+
+        .logo-loader {
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+
+        .logo-image {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+
+        .logo-text-loader {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: gradientShift 3s ease-in-out infinite, textGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes logoFloat {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-15px) scale(1.05);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+            }
+
+            to {
+                text-shadow: 0 0 20px rgba(59, 130, 246, 0.6), 0 0 30px rgba(245, 158, 11, 0.4);
+            }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        /* Logo spinning animation (optional) */
+        @keyframes logoSpin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* You can choose one of these logo styles */
+        .logo-spin {
+            animation: logoSpin 3s linear infinite;
+        }
+
+        .logo-bounce {
+            animation: logoFloat 2s ease-in-out infinite;
+        }
+
+        /* Smooth Page Transitions */
+        * {
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--primary), var(--secondary));
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(var(--gradient-start), var(--gradient-end));
+        }
     </style>
 </head>
+
 <body>
     <!-- Header & Navigation -->
     <header>
         <div class="container header-content">
             <div class="logo">
                 <div class="logo-icon"><i class="fas fa-microchip"></i></div>
-                <div class="logo-text">DREAM IT 2K26</div>
+                <div class="logo-text">DREAM IT'26</div>
             </div>
-            
+
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
-            
+
             <nav>
                 <ul id="navMenu">
                     <li><a href="#home">Home</a></li>
@@ -954,7 +1072,7 @@ nav a:hover::before {
     <section class="hero" id="home">
         <div class="hero-bg"></div>
         <div class="container hero-content">
-            <h1 id="eventName">Dream IT 2K26</h1>
+            <h1 id="eventName">Dream IT'26</h1>
             <p class="hero-subtitle">Inter College Technical Fest</p>
             <a href="#events" class="cta-button">Explore Events</a>
         </div>
@@ -970,6 +1088,88 @@ nav a:hover::before {
         </div>
     </section>
 
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Department</h2>
+            <div class="about-content"
+                style="background: var(--bg-card); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color);">
+                <div style="margin-bottom: 30px;">
+                    <h3 style="color: var(--secondary); margin-bottom: 15px; font-size: 1.8rem;">Department of Computer
+                        Science</h3>
+                    <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                        The Computer Science Department at Islamiah College (Autonomous), Vaniyambadi, was established
+                        in 1988 under Madras University. Over the decades, it has grown into a center of excellence,
+                        offering a comprehensive range of programs including B.Sc. Computer Science, BCA and B.Sc. Data
+                        Science.
+                    </p>
+                    <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.8;">
+                        With state-of-the-art laboratories, a dedicated library, and a team of experienced faculty, the
+                        department is committed to empowering students with the skills needed for the digital world.
+                    </p>
+                </div>
+
+                <div class="about-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px;">
+                    <div class="about-item"
+                        style="text-align: center; padding: 20px; background: rgba(15, 23, 42, 0.5); border-radius: 8px;">
+                        <i class="fas fa-graduation-cap"
+                            style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--text-light); margin-bottom: 10px;">Programs</h4>
+                        <p style="color: var(--text-gray);">B.Sc CS, BCA, B.Sc DS</p>
+                    </div>
+                    <div class="about-item"
+                        style="text-align: center; padding: 20px; background: rgba(15, 23, 42, 0.5); border-radius: 8px;">
+                        <i class="fas fa-history"
+                            style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--text-light); margin-bottom: 10px;">Established</h4>
+                        <p style="color: var(--text-gray);">Since 1988</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="about-content"
+                style="background: var(--bg-card); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color); margin-top: 30px;">
+                <div style="margin-bottom: 30px;">
+                    <h3 style="color: var(--secondary); margin-bottom: 15px; font-size: 1.8rem;">About Dream IT 2K26
+                    </h3>
+                    <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                        "Dream IT" is a State Level Inter-Collegiate Technical Symposium organized by the Department of
+                        Computer Science. It provides a platform for students from various colleges to showcase their
+                        technical skills, creativity, and innovation. The event features a variety of competitions
+                        designed to challenge and inspire the next generation of tech enthusiasts.
+                    </p>
+                </div>
+
+                <div class="about-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px;">
+                    <div class="about-item"
+                        style="text-align: center; padding: 20px; background: rgba(15, 23, 42, 0.5); border-radius: 8px;">
+                        <i class="fas fa-calendar-alt"
+                            style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--text-light); margin-bottom: 10px;">Date</h4>
+                        <p style="color: var(--text-gray);">29th January 2026</p>
+                    </div>
+                    <div class="about-item"
+                        style="text-align: center; padding: 20px; background: rgba(15, 23, 42, 0.5); border-radius: 8px;">
+                        <i class="fas fa-users"
+                            style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--text-light); margin-bottom: 10px;">Participants</h4>
+                        <p style="color: var(--text-gray);">UG & PG Students</p>
+                    </div>
+                    <div class="about-item"
+                        style="text-align: center; padding: 20px; background: rgba(15, 23, 42, 0.5); border-radius: 8px;">
+                        <i class="fas fa-trophy"
+                            style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--text-light); margin-bottom: 10px;">Events</h4>
+                        <p style="color: var(--text-gray);">Technical & Non-Technical</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Rules & Regulations Section -->
     <section class="rules-section" id="rulesSection">
         <div class="container">
@@ -979,19 +1179,49 @@ nav a:hover::before {
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content"
+                style="background: var(--bg-card); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color);">
+                <div class="contact-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <div class="contact-item" style="text-align: center;">
+                        <i class="fas fa-map-marker-alt"
+                            style="font-size: 2rem; color: var(--secondary); margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--text-light); margin-bottom: 10px;">Address</h4>
+                        <p style="color: var(--text-gray);">Islamiah College (Autonomous)<br>New Town, Vaniyambadi - 635
+                            752</p>
+                    </div>
+                    <div class="contact-item" style="text-align: center;">
+                        <i class="fas fa-envelope"
+                            style="font-size: 2rem; color: var(--secondary); margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--text-light); margin-bottom: 10px;">Email</h4>
+                        <p style="color: var(--text-gray);">csdepartment@islamiahcollege.edu.in</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#" class="cta-button" style="padding: 15px 50px; font-size: 1.2rem;">Register Now</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">Dream IT'26</div>
-                
+
                 <div class="footer-info">
                     <p id="departmentName">Department of Computer Science & Application</p>
-                    <p id="collegeName">Islamiah College (Autonomous)</p>
-                    <p><i class="fas fa-calendar-alt"></i> January-22-2026</p>
+                    <p id="collegeName">Islamiah College (Autonomous),Vaniyambadi</p>
+                    <p><i class="fas fa-calendar-alt"></i> 29 January 2026</p>
                     <p><i class="fas fa-map-marker-alt"></i> Allama Iqbal Auditorium</p>
                 </div>
-                
+
                 <div class="copyright">
                     &copy; 2026 Dream IT'26. All rights reserved.
                 </div>
@@ -999,50 +1229,86 @@ nav a:hover::before {
         </div>
     </footer>
     <!-- Add this before </body> -->
-<div class="loading-screen">
-    <div class="loading-spinner"></i></div>
-</div>
+    <div class="loading-screen">
+        <div class="loading-spinner"></i></div>
+    </div>
 
-<!-- Particles will be added dynamically by JavaScript -->
+    <!-- Particles will be added dynamically by JavaScript -->
 
     <script>
         // Event data - all editable
         const events = [
             {
-                id: 1,
-                name: "Paper Verse",
-                tagline: "A competitive programming challenge",
-                icon: "fas fa-code",
-                description: "Code Clash is a competitive programming event where participants solve algorithmic problems under time constraints. Showcase your coding skills and logical thinking.",
+                id: 5,
+                name: "Scroll Stopper",
+                tagline: "Create memes that stop the scroll",
+                icon: "fas fa-laugh-squint",
+                description: "Scroll Stopper  is a creative meme-making challenge where participants design humorous and relatable memes based on given themes within a limited time.",
                 rules: [
-                    "Participants must write code in one of the allowed languages: C, C++, Java, or Python",
-                    "No external resources or internet access allowed during the competition",
-                    "Problems will be of varying difficulty levels",
-                    "Each solved problem earns points based on difficulty and time taken",
-                    "Any attempt to plagiarize will lead to immediate disqualification"
+                    "Participants will be give your memes video in registration place ",
+                    "Memes should be based on the theme provided at the start",
+                    "Use of offensive, political, or inappropriate content is strictly prohibited",
+                    "The decision of the judges shall be final and binding.",
+                    "Basic image editing tools are allowed; no pre-made memes",
+                    "Judging criteria: creativity, humor, relevance to theme, and visual impact"
                 ],
-                teamSize: "1-2 members",
-                duration: "3 hours"
+                teamSize: "1 members",
+                duration: "30 Minutes"
             },
             {
-                id: 2,
-                name: "Code Canvas",
-                tagline: "Find and fix bugs in given code",
-                icon: "fas fa-bug",
-                description: "Debug Arena tests your ability to identify and fix bugs in provided code snippets. Speed and accuracy are key in this fast-paced debugging challenge.",
+                id: 1,
+                name: "Paper Verse",
+                tagline: "Present your innovative tech idea to judges",
+                icon: "fas fa-lightbulb",
+                description: "Idea Pitch provides a platform to present innovative technology ideas to a panel of judges. The focus is on feasibility, impact, and presentation skills.",
                 rules: [
-                    "Participants will be given buggy code snippets",
-                    "You must identify and fix all bugs in the shortest time possible",
-                    "Only the provided IDE can be used for debugging",
-                    "No external debugging tools allowed",
-                    "Points awarded based on number of bugs fixed and time taken"
+                    "Ideas must be original and technology-focused",
+                    "Presentation time: 3 minutes pitching + 2 minutes Q&A",
+                    "Teams must submit a brief abstract before the event",
+                    "Judging criteria: innovation, feasibility, impact, and presentation",
+                    "All team members must participate in the presentation",
+                    "The decision of the judges shall be final and binding.",
                 ],
-                teamSize: "Individual",
-                duration: "2 hours"
+                teamSize: "2 members(1 Team)",
+                duration: "5 Minutes"
             },
             {
                 id: 3,
                 name: "Iqubit",
+                tagline: "Test your knowledge in various tech domains",
+                icon: "fas fa-brain",
+                description: "IQubit tests participants' knowledge across various technology domains including programming, algorithms, databases, and emerging tech trends.",
+                rules: [
+                    "Quiz will consist of multiple rounds: MCQs, rapid-fire, and visual rounds",
+                    "Each correct answer earns points, wrong answers may deduct points",
+                    "No electronic devices allowed during the quiz",
+                    "Final decision of the quiz master is binding",
+                    "Team with highest points after all rounds wins"
+                ],
+                Selection: "Prelims will be conducted",
+                teamSize: "2 members(1 Team)",
+                duration: "30 Minutes"
+            },
+            {
+                id: 4,
+                name: "Visual IQ",
+                tagline: "Identify logos and test your visual intelligence",
+                icon: "fas fa-eye",
+                description: "Visual IQ is a logo identification challenge where participants test their visual memory and brand recognition skills by identifying logos within a limited time.",
+                rules: [
+                    "Participants must identify the correct logo or brand displayed",
+                    "Logos may be partially hidden, modified, or time-limited",
+                    "No external help or devices are allowed during the event",
+                    "Each correct answer carries points; no negative marking unless specified",
+                    "Judging criteria: accuracy, speed, and observation skills"
+                ],
+                Selection: "Prelims will be conducted",
+                teamSize: "2 members(1 Team)",
+                duration: "30 Minutes"
+            },
+            {
+                id: 2,
+                name: "Code Canvas",
                 tagline: "Build a website from scratch in limited time",
                 icon: "fas fa-laptop-code",
                 description: "Web Sprint is a front-end development challenge where participants create a responsive website based on a given theme within a time limit.",
@@ -1051,90 +1317,67 @@ nav a:hover::before {
                     "Only HTML, CSS, and vanilla JavaScript allowed",
                     "The website must be based on the theme announced at the start",
                     "All code must be written during the event (no pre-written code)",
-                    "Judging criteria: design, responsiveness, functionality, and creativity"
+                    "Judging criteria: design, responsiveness, functionality, and creativity",
+                    "The decision of the judges shall be final and binding.",
                 ],
-                teamSize: "1-3 members",
-                duration: "4 hours"
-            },
-            {
-                id: 4,
-                name: "Visual IQ",
-                tagline: "Design user interfaces for given problem statements",
-                icon: "fas fa-palette",
-                description: "Designathon focuses on creating intuitive and visually appealing user interfaces. Participants will design solutions for real-world problems.",
-                rules: [
-                    "Participants will receive problem statements at the start",
-                    "Designs must include wireframes, mockups, and prototypes",
-                    "Tools: Figma, Adobe XD, or Sketch (participants' choice)",
-                    "Presentations should explain design decisions and user flow",
-                    "Judging based on usability, aesthetics, and innovation"
-                ],
-                teamSize: "1-2 members",
-                duration: "5 hours"
-            },
-            {
-                id: 5,
-                name: "Scroll Stopper",
-                tagline: "Test your knowledge in various tech domains",
-                icon: "fas fa-question-circle",
-                description: "Tech Quiz tests participants' knowledge across various technology domains including programming, algorithms, databases, and emerging tech trends.",
-                rules: [
-                    "Quiz will consist of multiple rounds: MCQs, rapid-fire, and visual rounds",
-                    "Each correct answer earns points, wrong answers may deduct points",
-                    "No electronic devices allowed during the quiz",
-                    "Final decision of the quiz master is binding",
-                    "Team with highest points after all rounds wins"
-                ],
-                teamSize: "2 members",
-                duration: "2 hours"
-            },
-            {
-                id: 6,
-                name: "Adrenaline",
-                tagline: "Present your innovative tech idea to judges",
-                icon: "fas fa-lightbulb",
-                description: "Idea Pitch provides a platform to present innovative technology ideas to a panel of judges. The focus is on feasibility, impact, and presentation skills.",
-                rules: [
-                    "Ideas must be original and technology-focused",
-                    "Presentation time: 5 minutes pitching + 3 minutes Q&A",
-                    "Teams must submit a brief abstract before the event",
-                    "Judging criteria: innovation, feasibility, impact, and presentation",
-                    "All team members must participate in the presentation"
-                ],
-                teamSize: "2-4 members",
-                duration: "3 hours"
+                Selection: "Prelims will be conducted",
+                teamSize: "2 members(1 Team)",
+                duration: "30 Minutes"
             },
             {
                 id: 7,
                 name: "Error Hunt",
-                tagline: "Showcase your research through visual posters",
-                icon: "fas fa-chart-bar",
-                description: "Poster Presentation allows participants to showcase their research or projects through visually appealing posters. Emphasis is on clarity and visual communication.",
+                tagline: "Find and fix bugs in given code",
+                icon: "fas fa-bug",
+                description: "Debug Arena tests your ability to identify and fix bugs in provided code snippets. Speed and accuracy are key in this fast-paced debugging challenge.",
                 rules: [
-                    "Poster size: A1 (594mm × 841mm) in portrait orientation",
-                    "Content must be original research or project work",
-                    "Participants must be present during judging to explain their work",
-                    "Digital submissions must be provided along with printed posters",
-                    "Judging based on content, design, and presentation"
+                    "Participants will be given buggy code snippets",
+                    "You must identify and fix all bugs in the shortest time possible",
+                    "Only the provided IDE can be used for debugging",
+                    "No external debugging tools allowed",
+                    "Points awarded based on number of bugs fixed and time taken",
+                    "The decision of the judges shall be final and binding.",
                 ],
-                teamSize: "1-3 members",
-                duration: "3 hours"
+                Selection: "Prelims will be conducted",
+                teamSize: "2 members(1 Team)",
+                duration: "30 Minutes"
             },
+
+
+            {
+                id: 6,
+                name: "Adrenaline",
+                tagline: "Sell the idea. Spark the adrenaline.",
+                icon: "fas fa-bullhorn",
+                description: "Adrenaline is an advertisement-making challenge where participants create impactful and persuasive ads for a given product or concept within a limited time, testing creativity, marketing skills, and presentation.",
+                rules: [
+                    "Participants must create an original advertisement during the event",
+                    "The product or theme will be announced at the start",
+                    "Ads can be in the form of posters, scripts, or short presentations",
+                    "Use of offensive or inappropriate content is strictly prohibited",
+                    "Judging criteria: creativity, message clarity, originality, and audience impact",
+                    "The decision of the judges shall be final and binding.",
+                ],
+                teamSize: "3-6 members(1 Team)",
+                duration: "5 Minutes"
+            },
+
             {
                 id: 8,
                 name: "Drip Walk",
-                tagline: "Compete in popular esports titles",
-                icon: "fas fa-gamepad",
-                description: "Gaming Arena brings together gamers to compete in popular esports titles. Showcase your skills, teamwork, and strategic thinking in intense gaming battles.",
+                tagline: "Walk the ramp. Own the drip.",
+                icon: "fas fa-walking",
+                description: "Drip Walk is a ramp walk event where participants showcase their style, confidence, and attitude on stage. The event celebrates fashion, creativity, and personality through impactful walks.",
                 rules: [
-                    "Games will be announced one week before the event",
-                    "Participants must bring their own peripherals (keyboard, mouse, headset)",
-                    "Computers and gaming consoles will be provided",
-                    "Fair play is mandatory - any cheating leads to disqualification",
-                    "Tournament format: group stage followed by knockout rounds"
+                    "Participants must walk the ramp  as a team.",
+                    "Outfits should be Participants choice",
+                    "Props are allowed only with prior approval",
+                    "Participants will be judged on walk, confidence, styling, and stage presence",
+                    "Any form of inappropriate behavior or attire will lead to disqualification",
+                    "The decision of the judges shall be final and binding.",
                 ],
-                teamSize: "3-5 members (depending on game)",
-                duration: "6 hours"
+                teamSize: "3 members(Minimum)",
+                duration: "5 Minutes"
             }
         ];
 
@@ -1149,12 +1392,12 @@ nav a:hover::before {
         const collegeName = document.getElementById('collegeName');
 
         // Initialize the website
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Generate event cards
             renderEventCards();
-            
+
             // Set up mobile menu
-            mobileMenuBtn.addEventListener('click', function() {
+            mobileMenuBtn.addEventListener('click', function () {
                 navMenu.classList.toggle('active');
                 const icon = mobileMenuBtn.querySelector('i');
                 if (navMenu.classList.contains('active')) {
@@ -1165,31 +1408,28 @@ nav a:hover::before {
                     icon.classList.add('fa-bars');
                 }
             });
-            
+
             // Close mobile menu when clicking a link
             document.querySelectorAll('nav a').forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function () {
                     navMenu.classList.remove('active');
                     mobileMenuBtn.querySelector('i').classList.remove('fa-times');
                     mobileMenuBtn.querySelector('i').classList.add('fa-bars');
                 });
             });
-            
-            // Make event name, department, and college name editable
-            makeEditable(eventNameElement, "Dream IT 2K26");
-            makeEditable(departmentName, "Department of Computer Science & Engineering");
-            makeEditable(collegeName, "Prestige Institute of Technology & Management");
+
+
         });
 
         // Function to render event cards
         function renderEventCards() {
             eventsGrid.innerHTML = '';
-            
+
             events.forEach(event => {
                 const card = document.createElement('div');
                 card.className = 'event-card';
                 card.setAttribute('data-id', event.id);
-                
+
                 card.innerHTML = `
                     <div class="event-icon">
                         <i class="${event.icon}"></i>
@@ -1197,7 +1437,7 @@ nav a:hover::before {
                     <h3 class="event-name">${event.name}</h3>
                     <p class="event-tagline">${event.tagline}</p>
                 `;
-                
+
                 card.addEventListener('click', () => showEventRules(event.id));
                 eventsGrid.appendChild(card);
             });
@@ -1206,13 +1446,13 @@ nav a:hover::before {
         // Function to show event rules
         function showEventRules(eventId) {
             const event = events.find(e => e.id === eventId);
-            
+
             if (!event) return;
-            
+
             // Hide events section, show rules section
             document.getElementById('events').style.display = 'none';
             rulesSection.classList.add('active');
-            
+
             // Populate rules container
             rulesContainer.innerHTML = `
                 <div class="rules-header">
@@ -1235,12 +1475,12 @@ nav a:hover::before {
                 
                 <button class="back-button" id="backToEvents">Back to Events</button>
             `;
-            
+
             // Scroll to rules section
             rulesSection.scrollIntoView({ behavior: 'smooth' });
-            
+
             // Add event listener to back button
-            document.getElementById('backToEvents').addEventListener('click', function() {
+            document.getElementById('backToEvents').addEventListener('click', function () {
                 rulesSection.classList.remove('active');
                 document.getElementById('events').style.display = 'block';
                 document.getElementById('events').scrollIntoView({ behavior: 'smooth' });
@@ -1251,20 +1491,20 @@ nav a:hover::before {
         function makeEditable(element, defaultText) {
             element.setAttribute('contenteditable', 'true');
             element.setAttribute('title', 'Click to edit this text');
-            
+
             // Add visual feedback on focus
-            element.addEventListener('focus', function() {
+            element.addEventListener('focus', function () {
                 this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
                 this.style.padding = '2px 5px';
                 this.style.borderRadius = '3px';
                 this.style.outline = '2px solid var(--secondary)';
             });
-            
-            element.addEventListener('blur', function() {
+
+            element.addEventListener('blur', function () {
                 this.style.backgroundColor = 'transparent';
                 this.style.padding = '0';
                 this.style.outline = 'none';
-                
+
                 // If empty, restore default text
                 if (!this.textContent.trim()) {
                     this.textContent = defaultText;
@@ -1274,13 +1514,13 @@ nav a:hover::before {
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 const targetId = this.getAttribute('href');
-                
+
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     e.preventDefault();
                     targetElement.scrollIntoView({
@@ -1291,7 +1531,7 @@ nav a:hover::before {
         });
 
         // Header scroll effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
                 header.style.padding = '10px 0';
@@ -1303,49 +1543,49 @@ nav a:hover::before {
         });
         // Add this to your existing JavaScript
 
-// Scroll-triggered animations
-function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+        // Scroll-triggered animations
+        function initScrollAnimations() {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+
+        // Particle Background Effect
+        function createParticles() {
+            const particlesContainer = document.createElement('div');
+            particlesContainer.className = 'particles';
+
+            for (let i = 0; i < 8; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particlesContainer.appendChild(particle);
             }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-    
-    animatedElements.forEach(element => {
-        observer.observe(element);
-    });
-}
 
-// Particle Background Effect
-function createParticles() {
-    const particlesContainer = document.createElement('div');
-    particlesContainer.className = 'particles';
-    
-    for (let i = 0; i < 8; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particlesContainer.appendChild(particle);
-    }
-    
-    document.body.appendChild(particlesContainer);
-}
+            document.body.appendChild(particlesContainer);
+        }
 
-// Loading screen with logo
-function showLoadingScreen() {
-    const loadingScreen = document.createElement('div');
-    loadingScreen.className = 'loading-screen';
-    
-    // You can replace this with your actual logo image
-    // Option 1: Using Font Awesome icon as logo
-    loadingScreen.innerHTML = `
+        // Loading screen with logo
+        function showLoadingScreen() {
+            const loadingScreen = document.createElement('div');
+            loadingScreen.className = 'loading-screen';
+
+            // You can replace this with your actual logo image
+            // Option 1: Using Font Awesome icon as logo
+            loadingScreen.innerHTML = `
         <div class="logo-loader">
             <div class="logo-image">
                 <!-- Replace with your logo image -->
@@ -1356,55 +1596,56 @@ function showLoadingScreen() {
             <div class="logo-text-loader"><img src="logo (2).png" alt="Dream IT 2K26 Logo" style="width: 100%; height: 100%; object-fit: contain;"></div>
         </div>
     `;
-    
-    document.body.appendChild(loadingScreen);
-    
-    // Remove loading screen after animations complete
-    setTimeout(() => {
-        if (loadingScreen.parentNode) {
-            loadingScreen.style.animation = 'fadeOut 0.5s ease forwards';
+
+            document.body.appendChild(loadingScreen);
+
+            // Remove loading screen after animations complete
             setTimeout(() => {
                 if (loadingScreen.parentNode) {
-                    loadingScreen.parentNode.removeChild(loadingScreen);
+                    loadingScreen.style.animation = 'fadeOut 0.5s ease forwards';
+                    setTimeout(() => {
+                        if (loadingScreen.parentNode) {
+                            loadingScreen.parentNode.removeChild(loadingScreen);
+                        }
+                    }, 500);
                 }
-            }, 500);
+            }, 2500);
         }
-    }, 2500);
-}
 
-// Update your DOMContentLoaded event listener
-document.addEventListener('DOMContentLoaded', function() {
-    // ... existing code ...
-    
-    // Initialize animations
-    initScrollAnimations();
-    createParticles();
-    showLoadingScreen();
-    
-    // ... rest of existing code ...
-});
-// Update your DOMContentLoaded event listener
-document.addEventListener('DOMContentLoaded', function() {
-    // ... existing code ...
-    
-    // Add animation classes to elements
-    const sectionTitles = document.querySelectorAll('.section-title');
-    sectionTitles.forEach(title => {
-        title.classList.add('animate-on-scroll');
-    });
-    
-    const eventCards = document.querySelectorAll('.event-card');
-    eventCards.forEach(card => {
-        card.classList.add('animate-on-scroll');
-    });
-    
-    // Initialize animations
-    initScrollAnimations();
-    createParticles();
-    showLoadingScreen();
-    
-    // ... rest of existing code ...
-});
+        // Update your DOMContentLoaded event listener
+        document.addEventListener('DOMContentLoaded', function () {
+            // ... existing code ...
+
+            // Initialize animations
+            initScrollAnimations();
+            createParticles();
+            showLoadingScreen();
+
+            // ... rest of existing code ...
+        });
+        // Update your DOMContentLoaded event listener
+        document.addEventListener('DOMContentLoaded', function () {
+            // ... existing code ...
+
+            // Add animation classes to elements
+            const sectionTitles = document.querySelectorAll('.section-title');
+            sectionTitles.forEach(title => {
+                title.classList.add('animate-on-scroll');
+            });
+
+            const eventCards = document.querySelectorAll('.event-card');
+            eventCards.forEach(card => {
+                card.classList.add('animate-on-scroll');
+            });
+
+            // Initialize animations
+            initScrollAnimations();
+            createParticles();
+            showLoadingScreen();
+
+            // ... rest of existing code ...
+        });
     </script>
 </body>
+
 </html>
